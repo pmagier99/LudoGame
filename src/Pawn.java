@@ -4,21 +4,17 @@ public class Pawn {
     boolean active;
     boolean inHome;
     int position;
+    String ID;
 
-    public Pawn(String colour){
+    public Pawn(String colour, String ID, int position){
+        this.ID = colour + ID;
         this.colour = colour;
         active = false; inHome = false;
-        setPosition();
+        this.position = position;
     }
 
-    //setting a start position for each pawn based on its colour
-    private void setPosition(){
-        switch (colour) {
-            case "yellow" -> position = 0;
-            case "blue" -> position = 13;
-            case "red" -> position = 26;
-            case "green" -> position = 39;
-        }
+    public void addPawn(int position){
+        this.active = true;
+        this.position = position;
     }
-
 }
