@@ -1,14 +1,15 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Game {
+public class Game implements BoardCoordinates{
 
-    private final String[] playersColour = {"red", "yellow", "blue", "green"};
+    private final String[] playersColour = {"yellow", "red", "blue", "green"};
     private final int NumberOfFields = 52;
     Scanner scanner;
 
     ArrayList<Player> players;
     String[] board;
+    int[][] boardCoordinates = BoardCoordinates.bc;
     Dice dice;
 
     boolean gameStatus;

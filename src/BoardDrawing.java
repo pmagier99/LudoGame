@@ -44,12 +44,11 @@ public class BoardDrawing extends JComponent{
     /**
      * Public function used to graphically representation of moving a pawn on the board
      * @param pawn - Pawn that is specified to move
-     * @param x - X of new position
-     * @param y - Y of new position
+     * @param coordinates - array of coordinates of new position for pawn
      */
-    public void move(Pawn pawn, int x, int y){
-        pawn.x = 100;
-        pawn.y = 100;
+    public void move(Pawn pawn, int[] coordinates){
+        pawn.x = coordinates[0] * pawn.blockSize + (pawn.blockSize - pawn.pawnSize)/2;
+        pawn.y = coordinates[1] * pawn.blockSize + (pawn.blockSize - pawn.pawnSize)/2;
         repaint();
     }
 }

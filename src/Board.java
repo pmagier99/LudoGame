@@ -46,14 +46,14 @@ public class Board{
 
         //start&home RED
         g.setColor(Color.red);
-        g.fillRect(x+(8*blockSize), y+(2*blockSize), blockSize, blockSize);
+        g.fillRect(x+(8*blockSize), y+(3*blockSize), blockSize, blockSize);
         g.fillRect(x+(7*blockSize), y+(2*blockSize), blockSize, blockSize);
         g.fillRect(x+(7*blockSize), y+(3*blockSize), blockSize, blockSize);
         g.fillRect(x+(7*blockSize), y+(4*blockSize), blockSize, blockSize);
         g.fillRect(x+(7*blockSize), y+(5*blockSize), blockSize, blockSize);
 
         g.setColor(Color.black);
-        g.drawRect(x+(8*blockSize), y+(2*blockSize), blockSize, blockSize);
+        g.drawRect(x+(8*blockSize), y+(3*blockSize), blockSize, blockSize);
         g.drawRect(x+(7*blockSize), y+(2*blockSize), blockSize, blockSize);
         g.drawRect(x+(7*blockSize), y+(3*blockSize), blockSize, blockSize);
         g.drawRect(x+(7*blockSize), y+(4*blockSize), blockSize, blockSize);
@@ -61,14 +61,14 @@ public class Board{
 
         //start&home YELLOW
         g.setColor(Color.yellow);
-        g.fillRect(x+(6*blockSize), y+(12*blockSize), blockSize, blockSize);
+        g.fillRect(x+(6*blockSize), y+(11*blockSize), blockSize, blockSize);
         g.fillRect(x+(7*blockSize), y+(12*blockSize), blockSize, blockSize);
         g.fillRect(x+(7*blockSize), y+(11*blockSize), blockSize, blockSize);
         g.fillRect(x+(7*blockSize), y+(10*blockSize), blockSize, blockSize);
         g.fillRect(x+(7*blockSize), y+(9*blockSize), blockSize, blockSize);
 
         g.setColor(Color.black);
-        g.drawRect(x+(6*blockSize), y+(12*blockSize), blockSize, blockSize);
+        g.drawRect(x+(6*blockSize), y+(11*blockSize), blockSize, blockSize);
         g.drawRect(x+(7*blockSize), y+(12*blockSize), blockSize, blockSize);
         g.drawRect(x+(7*blockSize), y+(11*blockSize), blockSize, blockSize);
         g.drawRect(x+(7*blockSize), y+(10*blockSize), blockSize, blockSize);
@@ -76,14 +76,14 @@ public class Board{
 
         //start&home BLUE
         g.setColor(Color.blue);
-        g.fillRect(x+(2*blockSize), y+(6*blockSize), blockSize, blockSize);
+        g.fillRect(x+(3*blockSize), y+(6*blockSize), blockSize, blockSize);
         g.fillRect(x+(2*blockSize), y+(7*blockSize), blockSize, blockSize);
         g.fillRect(x+(3*blockSize), y+(7*blockSize), blockSize, blockSize);
         g.fillRect(x+(4*blockSize), y+(7*blockSize), blockSize, blockSize);
         g.fillRect(x+(5*blockSize), y+(7*blockSize), blockSize, blockSize);
 
         g.setColor(Color.black);
-        g.drawRect(x+(2*blockSize), y+(6*blockSize), blockSize, blockSize);
+        g.drawRect(x+(3*blockSize), y+(6*blockSize), blockSize, blockSize);
         g.drawRect(x+(2*blockSize), y+(7*blockSize), blockSize, blockSize);
         g.drawRect(x+(3*blockSize), y+(7*blockSize), blockSize, blockSize);
         g.drawRect(x+(4*blockSize), y+(7*blockSize), blockSize, blockSize);
@@ -91,14 +91,14 @@ public class Board{
 
         //start&home GREEN
         g.setColor(Color.green);
-        g.fillRect(x+(12*blockSize), y+(8*blockSize), blockSize, blockSize);
+        g.fillRect(x+(11*blockSize), y+(8*blockSize), blockSize, blockSize);
         g.fillRect(x+(12*blockSize), y+(7*blockSize), blockSize, blockSize);
         g.fillRect(x+(11*blockSize), y+(7*blockSize), blockSize, blockSize);
         g.fillRect(x+(10*blockSize), y+(7*blockSize), blockSize, blockSize);
         g.fillRect(x+(9*blockSize), y+(7*blockSize), blockSize, blockSize);
 
         g.setColor(Color.black);
-        g.drawRect(x+(12*blockSize), y+(8*blockSize), blockSize, blockSize);
+        g.drawRect(x+(11*blockSize), y+(8*blockSize), blockSize, blockSize);
         g.drawRect(x+(12*blockSize), y+(7*blockSize), blockSize, blockSize);
         g.drawRect(x+(11*blockSize), y+(7*blockSize), blockSize, blockSize);
         g.drawRect(x+(10*blockSize), y+(7*blockSize), blockSize, blockSize);
