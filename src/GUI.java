@@ -1,16 +1,43 @@
 import javax.swing.*;
+import java.awt.*;
+import java.util.ArrayList;
 
-public class GUI extends JFrame{
+/**
+ * A class to instantiate a GUI
+ */
+public class GUI extends JFrame {
 
-    Board board;
-    public GUI(int size, int players){
-        board = new Board(20,20, size, players);
-        setBounds(0, 0, (size*15) * 2,size*15+50);
+
+    private final int cellSize = 40;
+    BoardDrawing pd;
+
+    /**
+     * Constructor of GUI
+     * @param players List of players that participate in the game
+     */
+    public GUI(ArrayList<Player> players){
+
+        //Defining pawns and board drawing
+        pd = new BoardDrawing(players);
+        BoardPanel pp = new BoardPanel();
+        add(pp);
+
+        setSize((cellSize*15) * 2,cellSize*15+50);
         setTitle("Ludo Game");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
-        add(board);
         setVisible(true);
+    }
 
+    /**
+     * A BoardPanel class that extends JPanel, used for storing image from BoardDrawing class
+     */
+    class BoardPanel extends JPanel{
+        BoardPanel(){
+            pd.setPreferredSize(new Dimension(cellSize*15, cellSize*15));
+            add(pd);
+        }
     }
 }
+
+
