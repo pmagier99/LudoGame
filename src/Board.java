@@ -117,7 +117,7 @@ public class Board{
 
     private void drawSector(Graphics g, Player player){
 
-        g.setColor(player.pawns[0].c);
+        g.setColor(player.pawns.get(0).c);
         g.fillRect(player.sectorX, player.sectorY, 6*blockSize,6*blockSize);
 
         g.setColor(Color.white);

@@ -20,7 +20,7 @@ public class GUI extends JFrame {
         //Defining pawns and board drawing
         pd = new BoardDrawing(players);
         BoardPanel pp = new BoardPanel();
-        add(pp);
+        add(pp, BorderLayout.CENTER);
 
         setSize((cellSize*15) * 2,cellSize*15+50);
         setTitle("Ludo Game");

@@ -7,7 +7,9 @@ public class Pawn{
     String id;
     String colour;
     int startField;
+    int currentField;
     Player player;
+    int completePath;
 
     //Drawing properties
     final int blockSize = 40;
@@ -15,20 +17,21 @@ public class Pawn{
     int x; int y;
     Color c;
 
-    //InGame properties
-    boolean onBoard = false;
+    //InGame flags
     boolean inHome = false;
+    boolean ableToMove = false;
 
     /**
      * Constructor of pawn
      * @param player Player that this pawn belong to
-     * @param id ID of pawn (1-4)
+     * @param id ID of pawn (0-3)
      */
     public Pawn(Player player, int id) {
         this.id = player.colour+id;
         this.colour = player.colour;
         this.startField = player.startField;
         this.player = player;
+        this.completePath = 0;
 
         setDefaultXY(id);
         setColor();
@@ -37,8 +40,8 @@ public class Pawn{
     /**
      * Public function to set X and Y of pawn
      * in order to draw in appropriate place on board
-     * @param x
-     * @param y
+     * @param x new value of x
+     * @param y new value of y
      */
     public void setXY(int x, int y){
         this.x = x;
@@ -49,7 +52,7 @@ public class Pawn{
      * Private function to set a default X and Y of pawn
      * @param id id of pawn
      */
-    private void setDefaultXY(int id){
+    public void setDefaultXY(int id){
 
         int x = player.sectorX+blockSize;
         int y = player.sectorY+blockSize;
@@ -71,6 +74,11 @@ public class Pawn{
             case "green" -> c = Color.GREEN;
             case "red" -> c = Color.RED;
         }
+    }
+
+
+    public int getID(){
+        return Integer.parseInt(id.substring(id.length()-1));
     }
 
 }
