@@ -1,20 +1,32 @@
+import java.util.ArrayList;
+
 /**
  * Class for creating instance of Player
  */
 public class Player implements BoardCoordinates{
 
+
+    public static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_YELLOW = "\u001B[33m";
+    public static final String ANSI_BLUE = "\u001B[34m";
+
+    String consoleColour;
     String colour;
     int startField;
+    int activePawns = 0;
     int[][] homeCoordinates;
+    int homePawns = 0;
 
-    Pawn[] pawns = new Pawn[4];
-
+    ArrayList<Pawn> pawns = new ArrayList<>();
     final int blockSize = 40;
 
 
     //Drawing purpose to define where pawns are stored on the board
     int sectorX;
     int sectorY;
+
+
 
     /**
      * Constructor of Player
@@ -23,11 +35,12 @@ public class Player implements BoardCoordinates{
     public Player(String colour){
         this.colour = colour;
         setStartField();
-        setSectoryXY();
+        setSectorXY();
         setHome();
+        assignColours();
 
-        for(int i = 0; i < pawns.length; i++){
-            pawns[i] = new Pawn(this, i);
+        for(int i = 0; i < 4; i++){
+            pawns.add(new Pawn(this, i));
         }
     }
 
@@ -48,7 +61,7 @@ public class Player implements BoardCoordinates{
      * Private function to define a sector X and Y
      * to draw it on the board.
      */
-    private void setSectoryXY(){
+    private void setSectorXY(){
         switch (colour) {
             case "yellow" -> {
                 sectorX = 0;
@@ -75,6 +88,16 @@ public class Player implements BoardCoordinates{
             case "green" -> homeCoordinates = BoardCoordinates.greenHome;
             case "blue" -> homeCoordinates = BoardCoordinates.blueHome;
             case "red" -> homeCoordinates = BoardCoordinates.redHome;
+
+        }
+    }
+
+    private void assignColours(){
+        switch (colour) {
+            case "yellow" -> consoleColour = ANSI_YELLOW;
+            case "green" -> consoleColour = ANSI_GREEN;
+            case "blue" -> consoleColour = ANSI_BLUE;
+            case "red" -> consoleColour = ANSI_RED;
 
         }
     }
